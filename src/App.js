@@ -1,17 +1,13 @@
-import Landing from './pages/Landing'
-import Error from './pages/Error'
-import Register from './pages/Register'
-import Dashboard from './pages/Dashboard'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+// import Landing from './pages/Landing'
+// import Error from './pages/Error'
+// import Register from './pages/Register'
+// import Dashboard from './pages/Dashboard'
+import { Register, Landing, Dashboard, Error } from './pages'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
     <BrowserRouter>
-      <nav>
-        <Link to='/'>Dashboard</Link>
-        <Link to='/register'>Register</Link>
-        <Link to='/landing'>Landing</Link>
-      </nav>
       <Routes>
         <Route path='/' element={<Dashboard />}></Route>
         <Route path='/register' element={<Register />}></Route>
