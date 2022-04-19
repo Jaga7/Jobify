@@ -1,6 +1,6 @@
 import User from '../models/User.js'
 import { StatusCodes } from 'http-status-codes'
-import { BadRequestError, UnauthenticatedError } from '../errors/index.js'
+import { BadRequestError, UnauthorizedError } from '../errors/index.js'
 
 const register = async (req, res) => {
   const { name, password, email } = req.body
@@ -38,11 +38,11 @@ const login = async (req, res) => {
   }
   const user = await User.findOne({ email }).select('+password')
   if (!user) {
-    throw new UnauthenticatedError('Invalid Credentials')
+    throw new UnauthorizedError('Invalid Credentials')
   }
   const isPasswordCorrect = await user.comparePassword(password)
   if (!isPasswordCorrect) {
-    throw new UnauthenticatedError('Invalid Credentials')
+    throw new UnauthorizedError('Invalid Credentials')
   }
   const token = user.createJWT()
   user.password = undefined

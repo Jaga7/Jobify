@@ -4,7 +4,7 @@ dotenv.config()
 import 'express-async-errors'
 import morgan from 'morgan'
 
-// db and authenticateUser
+// db
 import connectDB from './db/connect.js'
 
 // routers
