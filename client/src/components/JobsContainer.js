@@ -19,7 +19,13 @@ const JobsContainer = () => {
     numOfPages,
   } = useAppContext()
   useEffect(() => {
-    getJobs()
+    const delayForTyping = setTimeout(() => {
+      getJobs()
+    }, 400)
+
+    // getJobs()
+    return () => clearTimeout(delayForTyping)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search, searchStatus, searchType, sort, page])
 
   if (isLoading) {
