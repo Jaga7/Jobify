@@ -31,6 +31,7 @@ import {
   SHOW_STATS_BEGIN,
   SHOW_STATS_SUCCESS,
   CLEAR_FILTERS,
+  CHANGE_PAGE,
 } from './actions'
 
 import reducer from './reducer'
@@ -102,7 +103,6 @@ const AppProvider = ({ children }) => {
       return response
     },
     (error) => {
-      // console.log(error.response)
       if (error.response.status === 401) {
         logoutUser()
         console.log('AUTH ERROR')
@@ -275,8 +275,8 @@ const AppProvider = ({ children }) => {
   }
 
   const getJobs = async () => {
-    const { search, searchStatus, searchType, sort } = state
-    let url = `/jobs?status=${searchStatus}&jobType=${searchType}&sort=${sort}`
+    const { search, searchStatus, searchType, sort, page } = state
+    let url = `/jobs?page=${page}&status=${searchStatus}&jobType=${searchType}&sort=${sort}`
     if (search) {
       url = url + `&search=${search}`
     }
@@ -293,7 +293,7 @@ const AppProvider = ({ children }) => {
         },
       })
     } catch (error) {
-      // logoutUser()
+      logoutUser()
     }
     clearAlert()
   }
@@ -305,7 +305,7 @@ const AppProvider = ({ children }) => {
       getJobs()
     } catch (error) {
       console.log(error.response)
-      // logoutUser()
+      logoutUser()
     }
   }
 
@@ -352,7 +352,7 @@ const AppProvider = ({ children }) => {
       })
     } catch (error) {
       console.log(error.response)
-      // logoutUser()
+      logoutUser()
     }
 
     clearAlert()
@@ -360,6 +360,10 @@ const AppProvider = ({ children }) => {
 
   const clearFilters = () => {
     dispatch({ type: CLEAR_FILTERS })
+  }
+
+  const changePage = (page) => {
+    dispatch({ type: CHANGE_PAGE, payload: { page } })
   }
 
   return (
@@ -382,6 +386,7 @@ const AppProvider = ({ children }) => {
         editJob,
         showStats,
         clearFilters,
+        changePage,
       }}
     >
       {children}

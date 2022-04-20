@@ -43,7 +43,6 @@ const getAllJobs = async (req, res) => {
   // NO AWAIT
   let result = Job.find(queryObject)
 
-  // chain sort conditions
   if (sort === 'latest') {
     result = result.sort('-createdAt')
   }
@@ -61,7 +60,6 @@ const getAllJobs = async (req, res) => {
   const limit = Number(req.query.limit) || 10
   const skip = (page - 1) * limit
   result = result.skip(skip).limit(limit)
-
   const jobs = await result
 
   const totalJobs = await Job.countDocuments(queryObject)
