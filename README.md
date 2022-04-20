@@ -26,8 +26,10 @@ https://jobify-aj-testing-prod.herokuapp.com/
 
 # Viewing stats
 
+ BarChart
 ![image](https://user-images.githubusercontent.com/75665204/164301982-1d191de1-5e8e-4d13-a9fe-9f1331c59f15.png)
 
+ Area Chart
 ![image](https://user-images.githubusercontent.com/75665204/164302010-d5da0d92-0bf0-47e0-8257-26ee29d81c3c.png)
 
 
