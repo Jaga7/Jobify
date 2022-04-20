@@ -4,7 +4,7 @@ A MERN project to track your job search.
 
 https://jobify-aj-testing-prod.herokuapp.com/
 
-# Registering
+# Login/Register
 
 ![image](https://user-images.githubusercontent.com/75665204/164301088-b4585fc0-7a80-4bba-91e4-8e36c89c55b2.png)
 
