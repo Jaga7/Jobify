@@ -1,3 +1,37 @@
+# Jobify
+
+A MERN project to track your job search.
+
+https://jobify-aj-testing-prod.herokuapp.com/
+
+# Registering
+
+![image](https://user-images.githubusercontent.com/75665204/164301088-b4585fc0-7a80-4bba-91e4-8e36c89c55b2.png)
+
+# Adding a job
+
+![image](https://user-images.githubusercontent.com/75665204/164301202-e6fdfd3f-191a-45a8-9020-c93626cddeb7.png)
+
+# Profile settings
+
+![image](https://user-images.githubusercontent.com/75665204/164301439-0a3697e8-378c-47d2-adee-8fc818545eec.png)
+
+# Searching our jobs
+
+![image](https://user-images.githubusercontent.com/75665204/164301694-21c37be5-0546-4e45-ad28-6847e826ec40.png)
+
+![image](https://user-images.githubusercontent.com/75665204/164301841-cd090aaa-dd65-490e-a0ca-247457bda551.png)
+
+# Viewing stats
+
+![image](https://user-images.githubusercontent.com/75665204/164301982-1d191de1-5e8e-4d13-a9fe-9f1331c59f15.png)
+
+![image](https://user-images.githubusercontent.com/75665204/164302010-d5da0d92-0bf0-47e0-8257-26ee29d81c3c.png)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
