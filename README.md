@@ -20,6 +20,8 @@ https://jobify-aj-testing-prod.herokuapp.com/
 
 ![image](https://user-images.githubusercontent.com/75665204/164301694-21c37be5-0546-4e45-ad28-6847e826ec40.png)
 
+# Pagination
+
 ![image](https://user-images.githubusercontent.com/75665204/164301841-cd090aaa-dd65-490e-a0ca-247457bda551.png)
 
 # Viewing stats
